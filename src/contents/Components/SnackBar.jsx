@@ -81,10 +81,7 @@ const SnackBar = ({ id }) => {
                     className="default width-100-p flex-dir-row"
                     style={{
                       maxWidth:
-                        currentState === "lowWidth" ||
-                        currentState === "verylowWidth"
-                          ? "100%"
-                          : "300px",
+                        currentState === "verylowWidth" ? "500px" : "300px",
                       Width: "100%",
                     }}
                   >

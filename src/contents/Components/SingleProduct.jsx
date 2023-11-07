@@ -36,7 +36,10 @@ const SingleProduct = ({ w1, w2, w3, w4, w5, data }) => {
                     currentState === "lowWidth"
                   ) && "card-anim"
                 } `}
-                style={{ height: windowSize.winWidth < 280 && "170px" }}
+                style={{
+                  height: windowSize.winWidth < 280 && "170px",
+                  animationTimeline: "view()",
+                }}
               >
                 <ItemMenu
                   id={item.id}
