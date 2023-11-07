@@ -62,7 +62,7 @@ const SnackBar = ({ id }) => {
               open={open.open}
               className="mar-bot-40px "
               TransitionComponent={open.Transition}
-            //  autoHideDuration={4000}
+              //  autoHideDuration={4000}
               sx={{
                 ".css-1kr9x0n-MuiSnackbarContent-action": {
                   marginLeft: 0,
@@ -71,6 +71,10 @@ const SnackBar = ({ id }) => {
                 ".css-1exqwzz-MuiSnackbarContent-message": {
                   padding: 0,
                 },
+                ".css-zykra6": {
+                  marginLeft: 0,
+                  width: "100%",
+                },
               }}
               onClose={handleClose}
               TransitionProps={{ onExited: handleExited }}
@@ -78,11 +82,9 @@ const SnackBar = ({ id }) => {
               action={
                 <React.Fragment>
                   <div
-                    className="default width-100-p flex-dir-row"
+                    className="default width-100-p flex-dir-row flex-gro-1"
                     style={{
-                      maxWidth:
-                        currentState === "verylowWidth" ? "500px" : "300px",
-                      Width: "100%",
+                      minWidth: "300px",
                     }}
                   >
                     <div className="default hei-60-px flex-dir-row gap-20-px flex-gro-1">
