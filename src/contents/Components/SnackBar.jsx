@@ -62,7 +62,7 @@ const SnackBar = ({ id }) => {
               open={open.open}
               className="mar-bot-40px "
               TransitionComponent={open.Transition}
-              //  autoHideDuration={4000}
+               autoHideDuration={4000}
               sx={{
                 ".css-1kr9x0n-MuiSnackbarContent-action": {
                   marginLeft: 0,
