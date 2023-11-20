@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 import MobileNavBarExpansion from "./MobileNavBarExpansion";
+import { ArrowDropDown, ArrowDropUp } from "@mui/icons-material";
 
 const MobileNavButtons = ({ name, url, details, expansion }) => {
   const [active, setActive] = useState(false);
@@ -30,7 +31,7 @@ const MobileNavButtons = ({ name, url, details, expansion }) => {
               onClick={() => setActive((active) => !active)}
               className="default width-100-p ali-ite-cnt padd-top-10-px padd-bot-10-px cur-sty-oh-poi"
             >
-              +
+              {active ? <ArrowDropUp /> : <ArrowDropDown />}
             </span>
           ) : (
             <></>

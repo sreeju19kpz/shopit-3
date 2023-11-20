@@ -144,7 +144,7 @@ const Home = () => {
         )}
       </div>
       <Footer />
-      <SnackBarIdGen />
+      {currentState !== "verylowWidth" && <SnackBarIdGen />}
     </div>
   );
 };

@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import Product, { loader as sLoader } from "./contents/Pages/Product";
 import "./server";
+
 import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
 import Watches from "./contents/Pages/Watches";

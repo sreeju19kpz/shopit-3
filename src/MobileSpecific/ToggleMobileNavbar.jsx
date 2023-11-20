@@ -15,7 +15,7 @@ const MobileNavbar = ({ state, close }) => {
               <div className="default flex  flex-shr-1 flex-dir-col flex-ali-str justify-con-spc-btw padd-rig-60px">
                 <div className="default flex-dir-row wid-300-px  ali-ite-cnt hei-50-px background-col-blue ">
                   <div className="default flex-dir-row width-100-p justify-con-spc-btw padd-rig-10-px padd-lef-10-px ">
-                    <div>logo</div>
+                    <div>EShop</div>
                     <div className="default flex-dir-col flex-gro-1 flex-ali-end">
                       <div className="default flex-dir-row  gap-10-px">
                         <div>

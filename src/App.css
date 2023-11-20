@@ -857,6 +857,9 @@ dialog::backdrop {
 .img-asp-rat-16-9 {
   aspect-ratio: 16/9;
 }
+.img-asp-rat-16-8 {
+  aspect-ratio: 16/8;
+}
 .img-asp-rat-4-2 {
   aspect-ratio: 4/2;
 }
@@ -967,26 +970,29 @@ input[type="checkbox"] {
 
 /* Animation*/
 .card-anim {
- 
   animation: linear animate-in-and-out both;
 }
 
 @keyframes animate-in-and-out {
   entry 0% {
     opacity: 0;
-    transform: translateY(30%);
+    transform: translateY(150%);
   }
   entry 100% {
     opacity: 1;
     transform: translateY(0);
   }
+}
 
-  exit 0% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  exit 100% {
-    opacity: 0;
-    transform: translateY(-100%);
-  }
+.thu-hov-eff::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(57, 57, 240, 0);
+  border-radius: 10px;
+  opacity: 1;
+}
+.thu-hov-eff:hover::after {
+  background-color: rgba(57, 57, 240, 0.15);
+  transition: 0.18s ease-in;
 }

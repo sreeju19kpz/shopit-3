@@ -21,3 +21,17 @@ export const PosterGroup1 = [
     img: hor3,
   },
 ];
+export const PosterGroup2 = [
+  {
+    url: "",
+    img: hor1,
+  },
+  {
+    url: "",
+    img: hor2,
+  },
+  {
+    url: "",
+    img: hor3,
+  },
+];

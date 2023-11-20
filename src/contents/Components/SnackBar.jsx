@@ -7,7 +7,6 @@ import Slide from "@mui/material/Slide";
 import { createTheme } from "@mui/material";
 import { ThemeProvider } from "@emotion/react";
 import { Link } from "react-router-dom";
-import useShowPanels from "../customHooks/useShowPanels";
 
 function SlideTransition(props) {
   return <Slide {...props} direction="up" />;
@@ -29,7 +28,7 @@ const SnackBar = ({ id }) => {
   const data = useGetSingleProductQuery(id);
   const [open, setOpen] = useState({ open: false, Transition: Slide });
   const [messageInfo, setMessageInfo] = React.useState(undefined);
-  const { currentState } = useShowPanels();
+
   useEffect(() => {
     if (open.open === false) {
       setOpen({ open: true, Transition: SlideTransition });
@@ -62,7 +61,7 @@ const SnackBar = ({ id }) => {
               open={open.open}
               className="mar-bot-40px "
               TransitionComponent={open.Transition}
-               autoHideDuration={4000}
+              autoHideDuration={4000}
               sx={{
                 ".css-1kr9x0n-MuiSnackbarContent-action": {
                   marginLeft: 0,
@@ -75,6 +74,9 @@ const SnackBar = ({ id }) => {
                   marginLeft: 0,
                   width: "100%",
                 },
+                ".css-1w0ym84": {
+                  padding: 0,
+                },
               }}
               onClose={handleClose}
               TransitionProps={{ onExited: handleExited }}
@@ -82,7 +84,7 @@ const SnackBar = ({ id }) => {
               action={
                 <React.Fragment>
                   <div
-                    className="default width-100-p flex-dir-row flex-gro-1"
+                    className="default width-100-p flex-dir-row"
                     style={{
                       minWidth: "300px",
                     }}

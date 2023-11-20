@@ -15,6 +15,8 @@ import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
 import { getProd } from "../customHooks/api";
 import Footer from "../Components/Footer";
+import ProductImgViewer from "../Components/ProductImgViewer";
+import MobileProductImgViewer from "../../MobileSpecific/MobileProductImgViewer";
 
 export function loader(id) {
   return defer({ prod: getProd(id) });
@@ -91,28 +93,10 @@ const Product = () => {
                     : "width-100-p"
                 }`}
               >
-                <div className="default width-100-p ">
-                  <img
-                    src={data.imageUrl[0]}
-                    alt=""
-                    className="max-wid-480-px"
-                  />
-                </div>
-                {!(currentState === "verylowWidth") && (
-                  <div className="default flex-gro-1 ">
-                    <div className="default flex-dir-row width-100p  justify-con-spc-btw">
-                      {data.imageUrl.map((img) => {
-                        return (
-                          <img
-                            key={uuidv4()}
-                            style={{ width: "60px" }}
-                            src={img}
-                            alt=""
-                          />
-                        );
-                      })}
-                    </div>
-                  </div>
+                {currentState === "verylowWidth" ? (
+                  <MobileProductImgViewer data={data.imageUrl} />
+                ) : (
+                  <ProductImgViewer data={data.imageUrl} />
                 )}
               </div>
             </div>

@@ -30,15 +30,9 @@ const SingleProduct = ({ w1, w2, w3, w4, w5, data }) => {
             return (
               <div
                 key={item.id}
-                className={`default width-100-p asp-rat-2-4 ${
-                  !(
-                    currentState === "verylowWidth" ||
-                    currentState === "lowWidth"
-                  ) && "card-anim"
-                } `}
+                className="default width-100-p asp-rat-2-4 "
                 style={{
                   height: windowSize.winWidth < 280 && "170px",
-                  animationTimeline: "view()",
                 }}
               >
                 <ItemMenu
